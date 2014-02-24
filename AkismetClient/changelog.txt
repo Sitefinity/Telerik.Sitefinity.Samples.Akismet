@@ -1,0 +1,7 @@
+----------------------------------
+Joel.Net's Akismet API - ChangeLog
+----------------------------------
+
+2006-06-07 v1.0.1
+    * Simplified API by removing VersionCheck from object creation. !!!BREAKS INTERFACE!!!
+    * Unit tests modified slightly

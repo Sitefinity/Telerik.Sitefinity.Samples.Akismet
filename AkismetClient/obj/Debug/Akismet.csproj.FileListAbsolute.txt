@@ -1,0 +1,4 @@
+C:\Users\dabour\AppData\Local\Telerik.Sitefinity.SDK\Akismet_8F41C939\AkismetClient\bin\Debug\Joel.Net.Akismet.dll
+C:\Users\dabour\AppData\Local\Telerik.Sitefinity.SDK\Akismet_8F41C939\AkismetClient\bin\Debug\Joel.Net.Akismet.pdb
+C:\Users\dabour\AppData\Local\Telerik.Sitefinity.SDK\Akismet_8F41C939\AkismetClient\obj\Debug\Joel.Net.Akismet.dll
+C:\Users\dabour\AppData\Local\Telerik.Sitefinity.SDK\Akismet_8F41C939\AkismetClient\obj\Debug\Joel.Net.Akismet.pdb
