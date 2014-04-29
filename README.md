@@ -8,7 +8,7 @@ In addition, the Akismet sample demonstrates how to call a third-party service f
 
 ### Requirements
 
-* Sitefinity 6.3 license
+* Sitefinity license
 
 * .NET Framework 4
 
@@ -32,6 +32,10 @@ The project refers to the following NuGet packages:
 
 *	Telerik.Sitefinity.Content.nupkg
 
+* Telerik.DataAccess.Core.nupkg
+
+* EntityFramework.nupkg v5.0.0
+
 **SitefinityWebApp** library
 
 *	Telerik.Sitefinity.All.nupkg
@@ -42,7 +46,7 @@ The project refers to the following NuGet packages:
 
 *	Telerik.Sitefinity.Content.nupkg
 
-*	OpenAccess.Core.nupkg
+*	Telerik.DataAccess.Core.nupkg
 
 You can find the packages in the official [Sitefinity Nuget Server](http://nuget.sitefinity.com).
 
