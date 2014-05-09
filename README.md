@@ -1,6 +1,8 @@
 Telerik.Sitefinity.Samples.Akismet
 ==================================
 
+[![Build Status](http://sdk-jenkins-ci.cloudapp.net/buildStatus/icon?job=Telerik.Sitefinity.Samples.Akismet.CI)](http://sdk-jenkins-ci.cloudapp.net/job/Telerik.Sitefinity.Samples.Akismet.CI/)
+
 The Akismet sample project demonstrates how you can use the Akismet service to filter spam in forum posts and comments. The Akismet sample uses the Sitefinity event architecture. On the event of creating or updating an item, the Akismet service is called to verify whether the item is spam or not. 
 
 In addition, the Akismet sample demonstrates how to call a third-party service from Sitefinity.
