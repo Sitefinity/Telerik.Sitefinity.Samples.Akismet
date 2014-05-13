@@ -26,33 +26,6 @@ In addition, the Akismet sample demonstrates how to call a third-party service f
 2. Modify the **connectionString** value to match your server address.
 3. Build the solution.
 
-The project refers to the following NuGet packages:
-
-**AkismetModule** library
-
-*	Telerik.Sitefinity.Core.nupkg
-
-*	Telerik.Sitefinity.Content.nupkg
-
-* Telerik.DataAccess.Core.nupkg
-
-* EntityFramework.nupkg v5.0.0
-
-**SitefinityWebApp** library
-
-*	Telerik.Sitefinity.All.nupkg
-
-**Telerik.Sitefinity.Samples.Common** library
-
-*	Telerik.Sitefinity.Core.nupkg
-
-*	Telerik.Sitefinity.Content.nupkg
-
-*	Telerik.DataAccess.Core.nupkg
-
-You can find the packages in the official [Sitefinity Nuget Server](http://nuget.sitefinity.com).
-
-
 ### Login
 
 To login to Sitefinity backend, use the following credentials: 
