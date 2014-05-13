@@ -26,8 +26,9 @@ In addition, the Akismet sample demonstrates how to call a third-party service f
 2. Modify the **connectionString** value to match your server address.
 3. Build the solution.
 
-For version-specific details about the required Sitefinity NuGet packages for this sample application, click on Releases.
-
+For version-specific details about the required Sitefinity NuGet packages for this sample application, click on [Releases]
+ (https://github.com/Sitefinity-SDK/Telerik.Sitefinity.Samples.Akismet/releases).
+ 
 ### Login
 
 To login to Sitefinity backend, use the following credentials: 
