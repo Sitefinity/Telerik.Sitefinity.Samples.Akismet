@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="StyleCopCopareRuns" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildProjectDirectory)\..\References\MSBuild.Community.Tasks.Targets"/>
+
+  <PropertyGroup>
+    <StyleCopResultsRootPath Condition="$(StyleCopResultsRootPath) == ''">\\telerik.com\resources\Controls\DISTRIBUTIONS\Sitefinity\StyleCop</StyleCopResultsRootPath>
+    <PrevStyleCopBuild Condition="$(PrevStyleCopBuild) == ''">Sitefinity.Release.StyleCop_20140429.7</PrevStyleCopBuild>
+    <CurrentStyleCopBuild Condition="$(CurrentStyleCopBuild) == ''">Sitefinity.Release.StyleCop_20140506.1</CurrentStyleCopBuild>
+    <StyleCopPrevPath Condition="$(StyleCopPrevPath) == ''">$(StyleCopResultsRootPath)\$(PrevStyleCopBuild)</StyleCopPrevPath>
+    <StyleCopCurrentPath Condition="$(StyleCopCurrentPath) == ''">$(StyleCopResultsRootPath)\$(CurrentStyleCopBuild)</StyleCopCurrentPath>
+    <StyleCopResultsFolder Condition="$(StyleCopResultsFolder) == ''">$(StyleCopResultsRootPath)\Coparison\$(CurrentStyleCopBuild)_vs_$(PrevStyleCopBuild)</StyleCopResultsFolder>
+    <StyleCopDiffTool Condition="$(StyleCopDiffTool) == ''">$(BinariesDirectory)\StyleCopCmdRunner.exe</StyleCopDiffTool>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!--Includes all Sitefinity files and excludes the test assemblies in the compare-->
+    <SitefinityAssemblies Include="$(StyleCopPrevPath)\Telerik.Sitefinity.*.xml;$(StyleCopPrevPath)\Telerik.Sitefinity.xml" Exclude="$(StyleCopPrevPath)\*Test*" />
+  </ItemGroup>
+
+  <Target Name="StyleCopCopareRuns" Inputs="@(SitefinityAssemblies)" Outputs="%(Identity).Dummy">
+    <PropertyGroup>
+      <SitefinityAssembliesIdentity>%(SitefinityAssemblies.Identity)</SitefinityAssembliesIdentity>
+      <AssemblyName>$(SitefinityAssembliesIdentity.Replace('$(StyleCopPrevPath)\', ""))</AssemblyName>
+    </PropertyGroup>
+
+    <Message Text="Identity is $(SitefinityAssembliesIdentity)"/>
+    <Message Text="AssemblyName name is $(AssemblyName)"/>
+    <MakeDir Directories="$(StyleCopResultsFolder)" Condition = "!Exists('$(StyleCopResultsFolder)')" />
+    <Exec Command="&quot;$(StyleCopDiffTool)&quot; @(SitefinityAssemblies->'/previousReportPath=&quot;%(Identity)&quot;', ' ') /latestReportPath=&quot;$(StyleCopCurrentPath)\$(AssemblyName)&quot; /OutputDirectory=&quot;$(StyleCopResultsFolder)&quot; /OutputFileName=&quot;$(AssemblyName).xlsx&quot;" IgnoreExitCode="true" />
+  </Target>
+
+</Project>
