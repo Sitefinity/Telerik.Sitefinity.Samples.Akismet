@@ -1,0 +1,219 @@
+<Project DefaultTargets="Default" xmlns= "http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <UsingTask AssemblyFile="StyleCop 4.7\StyleCop.dll" TaskName="StyleCopTask"/>
+
+  <PropertyGroup>
+    <RootFolder Condition="$(RootFolder) == ''">$(SourcesDirectory)</RootFolder>
+    <AnalyticsFolder Condition="$(AnalyticsFolder) == ''">$(RootFolder)\Analytics</AnalyticsFolder>
+    <ThunderFolder Condition="$(ThunderFolder) == ''">$(RootFolder)\Thunder</ThunderFolder>
+    <StyleCopOutputRootFolder Condition="$(StyleCopOutputRootFolder) == ''">\\telerik.com\resources\Controls\DISTRIBUTIONS\Sitefinity\StyleCop\$(BuildNumber)\</StyleCopOutputRootFolder>
+  </PropertyGroup>
+	
+	<ItemGroup>
+	 <SitefinityProject Include="Telerik.Sitefinity.Analytics">
+		<FolderToAnalyse>$(AnalyticsFolder)</FolderToAnalyse>
+		<ProjectPath>$(AnalyticsFolder)\Telerik.Sitefinity.Analytics.csproj</ProjectPath>
+		<StyleCopOutputFile>$(StyleCopOutputRootFolder)\Telerik.Sitefinity.Analytics.xml</StyleCopOutputFile>
+	 </SitefinityProject>
+    
+    <SitefinityProject Include="Telerik.Sitefinity.AuditTrail">
+      <FolderToAnalyse>$(RootFolder)</FolderToAnalyse>
+      <ProjectPath>$(RootFolder)\Telerik.Sitefinity.AuditTrail.csproj</ProjectPath>
+      <StyleCopOutputFile>$(StyleCopOutputRootFolder)\Telerik.Sitefinity.AuditTrail.xml</StyleCopOutputFile>
+    </SitefinityProject>
+
+    <SitefinityProject Include="Telerik.Sitefinity">
+		<FolderToAnalyse>$(RootFolder)\Telerik.Sitefinity</FolderToAnalyse>
+		<ProjectPath>$(RootFolder)\Telerik.Sitefinity.csproj</ProjectPath>
+		<StyleCopOutputFile>$(StyleCopOutputRootFolder)\Telerik.Sitefinity.xml</StyleCopOutputFile>
+	 </SitefinityProject>
+	 
+	 <SitefinityProject Include="Telerik.Sitefinity.Connectivity">
+		<FolderToAnalyse>$(RootFolder)\Telerik.Sitefinity.Connectivity</FolderToAnalyse>
+		<ProjectPath>$(RootFolder)\Telerik.Sitefinity.Connectivity.csproj</ProjectPath>
+		<StyleCopOutputFile>$(StyleCopOutputRootFolder)\Telerik.Sitefinity.Connectivity.xml</StyleCopOutputFile>
+	 </SitefinityProject>
+	 
+	 <SitefinityProject Include="Telerik.Sitefinity.EverliveConnector">
+		<FolderToAnalyse>$(RootFolder)\Telerik.Sitefinity.EverliveConnector</FolderToAnalyse>
+		<ProjectPath>$(RootFolder)\Telerik.Sitefinity.EverliveConnector.csproj</ProjectPath>
+		<StyleCopOutputFile>$(StyleCopOutputRootFolder)\Telerik.Sitefinity.EverliveConnector.xml</StyleCopOutputFile>
+	 </SitefinityProject>
+	 
+	 <SitefinityProject Include="Telerik.Sitefinity.MarketoConnector">
+		<FolderToAnalyse>$(RootFolder)\Telerik.Sitefinity.MarketoConnector</FolderToAnalyse>
+		<ProjectPath>$(RootFolder)\Telerik.Sitefinity.MarketoConnector.csproj</ProjectPath>
+		<StyleCopOutputFile>$(StyleCopOutputRootFolder)\Telerik.Sitefinity.MarketoConnector.xml</StyleCopOutputFile>
+	 </SitefinityProject>
+	 
+	 <SitefinityProject Include="Telerik.Sitefinity.SharepointConnector">
+		<FolderToAnalyse>$(RootFolder)\Telerik.Sitefinity.SharepointConnector</FolderToAnalyse>
+		<ProjectPath>$(RootFolder)\Telerik.Sitefinity.SharepointConnector.csproj</ProjectPath>
+		<StyleCopOutputFile>$(StyleCopOutputRootFolder)\Telerik.Sitefinity.SharepointConnector.xml</StyleCopOutputFile>
+	 </SitefinityProject>
+	 
+	 <SitefinityProject Include="Telerik.Sitefinity.Thunder.CodeSync">
+		<FolderToAnalyse>$(ThunderFolder)\Telerik.Sitefinity.Thunder.CodeSync</FolderToAnalyse>
+		<ProjectPath>$(ThunderFolder)\Telerik.Sitefinity.Thunder.CodeSync.csproj</ProjectPath>
+		<StyleCopOutputFile>$(StyleCopOutputRootFolder)\Telerik.Sitefinity.Thunder.CodeSync.xml</StyleCopOutputFile>
+	 </SitefinityProject>
+	 
+	 <SitefinityProject Include="Telerik.Sitefinity.Thunder.Contracts">
+		<FolderToAnalyse>$(ThunderFolder)\Telerik.Sitefinity.Thunder.Contracts</FolderToAnalyse>
+		<ProjectPath>$(ThunderFolder)\Telerik.Sitefinity.Thunder.Contracts.csproj</ProjectPath>
+		<StyleCopOutputFile>$(StyleCopOutputRootFolder)\Telerik.Sitefinity.Thunder.Contracts.xml</StyleCopOutputFile>
+	 </SitefinityProject>
+	 
+	 <SitefinityProject Include="Telerik.Sitefinity.Thunder.Module">
+		<FolderToAnalyse>$(ThunderFolder)\Telerik.Sitefinity.Thunder.Contracts</FolderToAnalyse>
+		<ProjectPath>$(ThunderFolder)\Telerik.Sitefinity.Thunder.Module.csproj</ProjectPath>
+		<StyleCopOutputFile>$(StyleCopOutputRootFolder)\TTelerik.Sitefinity.Thunder.Module.xml</StyleCopOutputFile>
+	 </SitefinityProject>
+	 
+	 <SitefinityProject Include="Telerik.Sitefinity.Thunder.Zip">
+		<FolderToAnalyse>$(ThunderFolder)\Telerik.Sitefinity.Thunder.Zip</FolderToAnalyse>
+		<ProjectPath>$(ThunderFolder)\Telerik.Sitefinity.Thunder.Zip.csproj</ProjectPath>
+		<StyleCopOutputFile>$(StyleCopOutputRootFolder)Telerik.Sitefinity.Thunder.Zip.xml</StyleCopOutputFile>
+	 </SitefinityProject>
+	  
+	 <SitefinityProject Include="Telerik.Sitefinity.TestUI.Arrangements">
+		<FolderToAnalyse>$(RootFolder)\Telerik.Sitefinity.TestUI.Arrangements</FolderToAnalyse>
+		<ProjectPath>$(RootFolder)\Telerik.Sitefinity.TestUI.Arrangements.csproj</ProjectPath>
+		<StyleCopOutputFile>$(StyleCopOutputRootFolder)\Telerik.Sitefinity.TestUI.Arrangements.xml</StyleCopOutputFile>
+	 </SitefinityProject>
+	 
+	 <SitefinityProject Include="Telerik.Sitefinity.TestUI.Arrangements.CommonOperations">
+		<FolderToAnalyse>$(RootFolder)\Telerik.Sitefinity.TestUI.Arrangements.CommonOperations</FolderToAnalyse>
+		<ProjectPath>$(RootFolder)\Telerik.Sitefinity.TestUI.Arrangements.CommonOperations.csproj</ProjectPath>
+		<StyleCopOutputFile>$(StyleCopOutputRootFolder)\Telerik.Sitefinity.TestUI.Arrangements.CommonOperations.xml</StyleCopOutputFile>
+	 </SitefinityProject>
+	 
+	 <SitefinityProject Include="Telerik.Sitefinity.ContentModules">
+		<FolderToAnalyse>$(RootFolder)\Telerik.Sitefinity.ContentModules</FolderToAnalyse>
+		<ProjectPath>$(RootFolder)\Telerik.Sitefinity.ContentModules.csproj</ProjectPath>
+		<StyleCopOutputFile>$(StyleCopOutputRootFolder)\Telerik.Sitefinity.ContentModules.xml</StyleCopOutputFile>
+	 </SitefinityProject>
+	 
+	 <SitefinityProject Include="Telerik.Sitefinity.DAM">
+		<FolderToAnalyse>$(RootFolder)\Telerik.Sitefinity.DAM</FolderToAnalyse>
+		<ProjectPath>$(RootFolder)\Telerik.Sitefinity.DAM.csproj</ProjectPath>
+		<StyleCopOutputFile>$(StyleCopOutputRootFolder)\Telerik.Sitefinity.DAM.xml</StyleCopOutputFile>
+	 </SitefinityProject>
+	 
+	 <SitefinityProject Include="Telerik.Sitefinity.Dashboard">
+		<FolderToAnalyse>$(RootFolder)\Telerik.Sitefinity.Dashboard</FolderToAnalyse>
+		<ProjectPath>$(RootFolder)\Telerik.Sitefinity.Dashboard.csproj</ProjectPath>
+		<StyleCopOutputFile>$(StyleCopOutputRootFolder)\Telerik.Sitefinity.Dashboard.xml</StyleCopOutputFile>
+	 </SitefinityProject>
+	 
+	 <SitefinityProject Include="Telerik.Sitefinity.DropboxLibrarie">
+		<FolderToAnalyse>$(RootFolder)\Telerik.Sitefinity.DropboxLibrarie</FolderToAnalyse>
+		<ProjectPath>$(RootFolder)\Telerik.Sitefinity.DropboxLibrarie.csproj</ProjectPath>
+		<StyleCopOutputFile>$(StyleCopOutputRootFolder)\Telerik.Sitefinity.DropboxLibrarie.xml</StyleCopOutputFile>
+	 </SitefinityProject>
+	 
+	 <SitefinityProject Include="Telerik.Sitefinity.Ecommerce">
+		<FolderToAnalyse>$(RootFolder)\Telerik.Sitefinity.Ecommerce</FolderToAnalyse>
+		<ProjectPath>$(RootFolder)\Telerik.Sitefinity.Ecommerce.csproj</ProjectPath>
+		<StyleCopOutputFile>$(StyleCopOutputRootFolder)\Telerik.Sitefinity.Ecommerce.xml</StyleCopOutputFile>
+	 </SitefinityProject>
+	 
+	 <SitefinityProject Include="Telerik.Sitefinity.Forums">
+		<FolderToAnalyse>$(RootFolder)\Telerik.Sitefinity.Forums</FolderToAnalyse>
+		<ProjectPath>$(RootFolder)\Telerik.Sitefinity.Forums.csproj</ProjectPath>
+		<StyleCopOutputFile>$(StyleCopOutputRootFolder)\Telerik.Sitefinity.Forums.xml</StyleCopOutputFile>
+	 </SitefinityProject>
+	 
+	 <SitefinityProject Include="Telerik.Sitefinity.Migration">
+		<FolderToAnalyse>$(RootFolder)\Telerik.Sitefinity.Migration</FolderToAnalyse>
+		<ProjectPath>$(RootFolder)\Telerik.Sitefinity.Migration.csproj</ProjectPath>
+		<StyleCopOutputFile>$(StyleCopOutputRootFolder)\Telerik.Sitefinity.Migration.xml</StyleCopOutputFile>
+	 </SitefinityProject>
+	 
+	 <SitefinityProject Include="Telerik.Sitefinity.MobileAppBuilder">
+		<FolderToAnalyse>$(RootFolder)\Telerik.Sitefinity.MobileAppBuilder</FolderToAnalyse>
+		<ProjectPath>$(RootFolder)\Telerik.Sitefinity.MobileAppBuilder.csproj</ProjectPath>
+		<StyleCopOutputFile>$(StyleCopOutputRootFolder)\Telerik.Sitefinity.MobileAppBuilder.xml</StyleCopOutputFile>
+	 </SitefinityProject>
+	 
+	 <SitefinityProject Include="Telerik.Sitefinity.Model">
+		<FolderToAnalyse>$(RootFolder)\Telerik.Sitefinity.Model</FolderToAnalyse>
+		<ProjectPath>$(RootFolder)\Telerik.Sitefinity.Model.csproj</ProjectPath>
+		<StyleCopOutputFile>$(StyleCopOutputRootFolder)\Telerik.Sitefinity.Model.xml</StyleCopOutputFile>
+	 </SitefinityProject>
+	 
+	 <SitefinityProject Include="Telerik.Sitefinity.Personalization">
+		<FolderToAnalyse>$(RootFolder)\Telerik.Sitefinity.Personalization</FolderToAnalyse>
+		<ProjectPath>$(RootFolder)\Telerik.Sitefinity.Personalization.csproj</ProjectPath>
+		<StyleCopOutputFile>$(StyleCopOutputRootFolder)\Telerik.Sitefinity.Personalization.xml</StyleCopOutputFile>
+	 </SitefinityProject>
+	 
+	 <SitefinityProject Include="Telerik.Sitefinity.Personalization.Impl">
+		<FolderToAnalyse>$(RootFolder)\Telerik.Sitefinity.Personalization.Impl</FolderToAnalyse>
+		<ProjectPath>$(RootFolder)\Telerik.Sitefinity.Personalization.Impl.csproj</ProjectPath>
+		<StyleCopOutputFile>$(StyleCopOutputRootFolder)\Telerik.Sitefinity.Personalization.Impl.xml</StyleCopOutputFile>
+	 </SitefinityProject>
+	 
+	 <SitefinityProject Include="Telerik.Sitefinity.RecurrentRules">
+		<FolderToAnalyse>$(RootFolder)\Telerik.Sitefinity.RecurrentRules</FolderToAnalyse>
+		<ProjectPath>$(RootFolder)\Telerik.Sitefinity.RecurrentRules.csproj</ProjectPath>
+		<StyleCopOutputFile>$(StyleCopOutputRootFolder)\Telerik.Sitefinity.RecurrentRules.xml</StyleCopOutputFile>
+	 </SitefinityProject>
+	 
+	 <SitefinityProject Include="Telerik.Sitefinity.Resources">
+		<FolderToAnalyse>$(RootFolder)\Telerik.Sitefinity.Resources</FolderToAnalyse>
+		<ProjectPath>$(RootFolder)\Telerik.Sitefinity.Resources.csproj</ProjectPath>
+		<StyleCopOutputFile>$(StyleCopOutputRootFolder)\Telerik.Sitefinity.Resources.xml</StyleCopOutputFile>
+	 </SitefinityProject>
+	 
+	 <SitefinityProject Include="Telerik.Sitefinity.Search">
+		<FolderToAnalyse>$(RootFolder)\Telerik.Sitefinity.Search</FolderToAnalyse>
+		<ProjectPath>$(RootFolder)\Telerik.Sitefinity.Search.csproj</ProjectPath>
+		<StyleCopOutputFile>$(StyleCopOutputRootFolder)\Telerik.Sitefinity.Search.xml</StyleCopOutputFile>
+	 </SitefinityProject>
+	 
+	 <SitefinityProject Include="Telerik.Sitefinity.Search.Impl">
+		<FolderToAnalyse>$(RootFolder)\Telerik.Sitefinity.Search.Impl</FolderToAnalyse>
+		<ProjectPath>$(RootFolder)\Telerik.Sitefinity.Search.Impl.csproj</ProjectPath>
+		<StyleCopOutputFile>$(StyleCopOutputRootFolder)\Telerik.Sitefinity.Search.Impl.xml</StyleCopOutputFile>
+	 </SitefinityProject>
+	 
+	 <SitefinityProject Include="Telerik.Sitefinity.SiteSync">
+		<FolderToAnalyse>$(RootFolder)\Telerik.Sitefinity.SiteSync</FolderToAnalyse>
+		<ProjectPath>$(RootFolder)\Telerik.Sitefinity.SiteSync.csproj</ProjectPath>
+		<StyleCopOutputFile>$(StyleCopOutputRootFolder)\Telerik.Sitefinity.SiteSync.xml</StyleCopOutputFile>
+	 </SitefinityProject>
+	 
+	 <SitefinityProject Include="Telerik.Sitefinity.TestUtilities">
+		<FolderToAnalyse>$(RootFolder)\Telerik.Sitefinity.TestUtilities</FolderToAnalyse>
+		<ProjectPath>$(RootFolder)\Telerik.Sitefinity.TestUtilities.csproj</ProjectPath>
+		<StyleCopOutputFile>$(StyleCopOutputRootFolder)\Telerik.Sitefinity.TestUtilities.xml</StyleCopOutputFile>
+	 </SitefinityProject>
+	 
+	 <SitefinityProject Include="Telerik.Sitefinity.UI.MVC">
+		<FolderToAnalyse>$(RootFolder)\Telerik.Sitefinity.UI.MVC</FolderToAnalyse>
+		<ProjectPath>$(RootFolder)\Telerik.Sitefinity.UI.MVC.csproj</ProjectPath>
+		<StyleCopOutputFile>$(StyleCopOutputRootFolder)\Telerik.Sitefinity.UI.MVC.xml</StyleCopOutputFile>
+	 </SitefinityProject>
+	 
+	 <SitefinityProject Include="Telerik.Sitefinity.Utilities">
+		<FolderToAnalyse>$(RootFolder)\Telerik.Sitefinity.Utilities</FolderToAnalyse>
+		<ProjectPath>$(RootFolder)\Telerik.Sitefinity.Utilities.csproj</ProjectPath>
+		<StyleCopOutputFile>$(StyleCopOutputRootFolder)\Telerik.Sitefinity.Utilities.xml</StyleCopOutputFile>
+	 </SitefinityProject>
+	 
+	</ItemGroup>
+    
+ <Target Name="Default" Inputs="@(SitefinityProject)" Outputs="%(Identity).Dummy">
+	 <Message Text="%(SitefinityProject.StyleCopOutputFile)" />
+   <MakeDir Directories="$(StyleCopOutputRootFolder)" Condition = "!Exists('$(StyleCopOutputRootFolder)')" />
+
+   <MSBuild
+        Projects="StyleCopExecutor.proj"
+        Properties = "SitefinityProjectPath=%(SitefinityProject.ProjectPath);
+		                  SitefinityProjectOutputFile=%(SitefinityProject.StyleCopOutputFile);
+					            FoldersToAnalyze =%(SitefinityProject.FolderToAnalyse)"
+        ContinueOnError="true" />
+
+    </Target>
+   
+</Project>
