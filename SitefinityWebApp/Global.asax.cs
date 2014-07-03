@@ -27,7 +27,9 @@ namespace SitefinityWebApp
         private const string ForumPostId = "CBD71839-C47F-4937-8AFF-4860579481F8";
 
         private const string AkismetBlogId = "DE26A02F-3785-46CD-AF8B-1A86D7091439";
-        private const string AkismetBlogTitle = "Aksimet Blog";
+        private const string AkismetBlogPostId = "DE26A02F-3785-46CD-AF8B-1A86D7091440";
+
+        private const string AkismetBlogTitle = "Akismet Blog";
         private const string AkismetBlogDescription = "A blog to test Akismet spam protection for comments";
 
         private const string HomePageId = "E1F546F9-041F-42D9-89B6-B879803C2B46";
@@ -109,6 +111,7 @@ namespace SitefinityWebApp
             var result = SampleUtilities.CreateBlog(new Guid(AkismetBlogId), AkismetBlogTitle, AkismetBlogDescription);
             SampleUtilities.CreateBlogPost(
                 new Guid(AkismetBlogId),
+                new Guid(AkismetBlogPostId),
                 "Akismet Integration in Sitefinity",
                 "You can submit comments to this blog post to test the Akismet integration. They will be checked through Akismet to confirm they're not spam",
                 "Telerik",
