@@ -147,10 +147,6 @@
     <Reference Include="ServiceStack.Interfaces">
       <HintPath>packages\ServiceStack.Interfaces.4.0.22\lib\net40\ServiceStack.Interfaces.dll</HintPath>
     </Reference>
-    <Reference Include="ServiceStack.ServiceInterface, Version=3.9.56.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>packages\Sitefinity.ServiceStack.3.9.56\lib\net35\ServiceStack.ServiceInterface.dll</HintPath>
-    </Reference>
     <Reference Include="ServiceStack.Text">
       <HintPath>packages\ServiceStack.Text.Signed.4.0.22\lib\net40\ServiceStack.Text.dll</HintPath>
     </Reference>
@@ -284,15 +280,6 @@
     </Reference>
     <Reference Include="Telerik.Sitefinity">
       <HintPath>packages\Telerik.Sitefinity.Core.7.1.5141.0-beta\lib\net40\Telerik.Sitefinity.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.Analytics.Server.Core">
-      <HintPath>packages\Telerik.Sitefinity.Analytics.6.3.5000.0\lib\net40\Telerik.Sitefinity.Analytics.Server.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.Analytics.Server.DependencyResolution">
-      <HintPath>packages\Telerik.Sitefinity.Analytics.6.3.5000.0\lib\net40\Telerik.Sitefinity.Analytics.Server.DependencyResolution.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.Analytics.Server.GoogleAnalyticsPlugin">
-      <HintPath>packages\Telerik.Sitefinity.Analytics.6.3.5000.0\lib\net40\Telerik.Sitefinity.Analytics.Server.GoogleAnalyticsPlugin.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Sitefinity.Analytics.Server.Infrastructure">
       <HintPath>packages\Telerik.Sitefinity.Analytics.7.1.5141.0-beta\lib\net40\Telerik.Sitefinity.Analytics.Server.Infrastructure.dll</HintPath>
