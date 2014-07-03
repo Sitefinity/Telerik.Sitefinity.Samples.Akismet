@@ -14,8 +14,7 @@ namespace AkismetModule
 
         }
 
-        public AkismetResources(ResourceDataProvider dataProvider)
-            :base(dataProvider)
+        public AkismetResources(ResourceDataProvider dataProvider) : base(dataProvider)
         {
 
         }

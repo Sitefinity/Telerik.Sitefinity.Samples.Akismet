@@ -36,4 +36,4 @@ using System.Web.UI;
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
 
-[assembly:WebResource("AkismetModule.UI.AkismetBasicSettingsView.js", "application/x-javascript")]
+[assembly: WebResource("AkismetModule.UI.AkismetBasicSettingsView.js", "application/x-javascript")]

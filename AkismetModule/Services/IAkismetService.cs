@@ -10,7 +10,7 @@ namespace AkismetModule.Services
     public interface IAkismetService
     {
         [OperationContract]
-        [WebGet(UriTemplate="/", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
+        [WebGet(UriTemplate = "/", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
         AkismetViewModel GetSettings();
 
         [OperationContract]

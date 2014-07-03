@@ -16,13 +16,6 @@ namespace AkismetModule.UI
         protected override void InitializeViews()
         {
             base.InitializeViews();
-
-            //this.Container.GetControl<PlaceHolder>("placeHolder", true).Controls.Add(
-            //    new BackendContentView()
-            //    {
-            //        ModuleName = AkismetModule.ModuleName,
-            //        ControlDefinitionName = AkismetDefinitions.BackendDefinitionName
-            //    });
         }
 
         #region Control References

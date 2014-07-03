@@ -91,7 +91,7 @@ namespace AkismetModule
             var catchSpamInForums = Config.Get<AkismetModuleConfig>().ProtectForums;
             if (catchSpamInForums)
             {
-                var forumsMan = ForumsManager.GetManager(String.Empty, "DummyTransaction");
+                var forumsMan = ForumsManager.GetManager(string.Empty, "DummyTransaction");
 
                 var existingPost = forumsMan.GetPost(post.Id);
                 if (existingPost != null && existingPost.IsMarkedSpam != post.IsMarkedSpam)
@@ -184,7 +184,7 @@ namespace AkismetModule
             var catchSpamInComments = Config.Get<AkismetModuleConfig>().ProtectComments;
             if (catchSpamInComments)
             {
-                var blogsMan = BlogsManager.GetManager(String.Empty, "DummyTransaction");
+                var blogsMan = BlogsManager.GetManager(string.Empty, "DummyTransaction");
                 var existingComment = blogsMan.GetComment(comment.Id);
 
                 if (existingComment != null && existingComment.CommentStatus != comment.CommentStatus)

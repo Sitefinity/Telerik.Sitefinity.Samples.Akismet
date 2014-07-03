@@ -37,7 +37,13 @@ namespace SitefinityWebApp
         protected void Application_Start(object sender, EventArgs e)
         {
             Bootstrapper.Initializing += new EventHandler<ExecutingEventArgs>(Bootstrapper_Initializing);
-            Bootstrapper.Initialized += new EventHandler<ExecutedEventArgs>(Bootstrapper_Initialized);
+            SystemManager.ApplicationStart += SystemManager_ApplicationStart;
+        }
+
+        void SystemManager_ApplicationStart(object sender, EventArgs e)
+        {
+            SystemManager.RunWithElevatedPrivilegeDelegate worker = new SystemManager.RunWithElevatedPrivilegeDelegate(CreateSample);
+            SystemManager.RunWithElevatedPrivilege(worker);
         }
 
         void Bootstrapper_Initializing(object sender, Telerik.Sitefinity.Data.ExecutingEventArgs e)
@@ -45,15 +51,6 @@ namespace SitefinityWebApp
             if (e.CommandName == "RegisterRoutes")
             {
                 SampleUtilities.RegisterModule<AkismetModule.AkismetModule>("Akismet", "Showcases Forums Akismet integration");
-            }
-        }
-
-        protected void Bootstrapper_Initialized(object sender, Telerik.Sitefinity.Data.ExecutedEventArgs args)
-        {
-            if (args.CommandName == "Bootstrapped")
-            {
-                SystemManager.RunWithElevatedPrivilegeDelegate worker = new SystemManager.RunWithElevatedPrivilegeDelegate(CreateSample);
-                SystemManager.RunWithElevatedPrivilege(worker);
             }
         }
 
@@ -101,20 +98,21 @@ namespace SitefinityWebApp
 
         private void CreateForums()
         {
-            var success = SampleUtilities.CreateForumGroup(new Guid(ForumGroupId), ForumGroupTitle, String.Empty);
+            var success = SampleUtilities.CreateForumGroup(new Guid(ForumGroupId), ForumGroupTitle, string.Empty);
 
-            SampleUtilities.CreateForum(new Guid(ForumId), new Guid(ForumGroupId), ForumTitle, String.Empty);
+            SampleUtilities.CreateForum(new Guid(ForumId), new Guid(ForumGroupId), ForumTitle, string.Empty);
             SampleUtilities.CreateForumThreadFromPost(new Guid(ForumId), new Guid(ForumThreadId), new Guid(ForumPostId), "You can post in this thread to test the Akismet sample", "This is the first post.");
         }
 
         private void CreateBlogs()
         {
             var result = SampleUtilities.CreateBlog(new Guid(AkismetBlogId), AkismetBlogTitle, AkismetBlogDescription);
-            SampleUtilities.CreateBlogPost(new Guid(AkismetBlogId), 
+            SampleUtilities.CreateBlogPost(
+                new Guid(AkismetBlogId),
                 "Akismet Integration in Sitefinity",
                 "You can submit comments to this blog post to test the Akismet integration. They will be checked through Akismet to confirm they're not spam",
-                "Telerik", "A blog post to test comment submission"
-                );
+                "Telerik",
+                "A blog post to test comment submission");
         }
 
         protected void Session_Start(object sender, EventArgs e)
