@@ -185,9 +185,9 @@ namespace AkismetModule
             if (catchSpamInComments)
             {
                 var blogsMan = BlogsManager.GetManager(string.Empty, "DummyTransaction");
-                var existingComment = blogsMan.GetComment(comment.Id);
+                var existingComment = SystemManager.GetCommentsService().GetComment(comment.Id.ToString());
 
-                if (existingComment != null && existingComment.CommentStatus != comment.CommentStatus)
+                if (existingComment != null && existingComment.Status != comment.Status.ToString())
                 {
                     Akismet akismetApiClient = new Akismet(Config.Get<AkismetModuleConfig>().ApiKey, "http://www.sitefinity.com", "SitefinityAkismetModule");
                     if (!akismetApiClient.VerifyKey())
@@ -212,7 +212,7 @@ namespace AkismetModule
                             CommentAuthorUrl = comment.Website
                         };
 
-                        if (comment.CommentStatus == CommentStatus.Spam)
+                        if (comment.CommentStatus.ToString() == Telerik.Sitefinity.Services.Comments.StatusConstants.Spam)
                         {
                             // the item has been marked as spam
                             akismetApiClient.SubmitSpam(updatedComment);
