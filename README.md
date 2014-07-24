@@ -10,9 +10,8 @@ In addition, the Akismet sample demonstrates how to call a third-party service f
 
 ### Requirements
 
-* Sitefinity 7.1 Beta license
+* Sitefinity license
  
-  **NOTE**: For more information about acquiring a Sitefinity Beta license, contact [sales@sitefinity.com](sales@sitefinity.com)
 * .NET Framework 4
 
 * Visual Studio 2012
