@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Linq;
 using Telerik.Sitefinity.Abstractions;
-using Telerik.Sitefinity.Samples.Common;
 using Telerik.Sitefinity.Data;
-using Telerik.Sitefinity.Services;
-using Telerik.Sitefinity.Modules.GenericContent.Web.UI;
 using Telerik.Sitefinity.Forums.Web.UI;
 using Telerik.Sitefinity.Modules.Blogs.Web.UI;
+using Telerik.Sitefinity.Modules.GenericContent.Web.UI;
+using Telerik.Sitefinity.Samples.Common;
+using Telerik.Sitefinity.Services;
 
 namespace SitefinityWebApp
 {
@@ -94,8 +94,6 @@ namespace SitefinityWebApp
                 BlogPostView blogs = new BlogPostView();
                 SampleUtilities.AddControlToPage(new Guid(BlogPageId), blogs, "Content", "Blog Posts");
             }
-
-
         }
 
         private void CreateForums()
@@ -120,32 +118,26 @@ namespace SitefinityWebApp
 
         protected void Session_Start(object sender, EventArgs e)
         {
-
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)
         {
-
         }
 
         protected void Application_AuthenticateRequest(object sender, EventArgs e)
         {
-
         }
 
         protected void Application_Error(object sender, EventArgs e)
         {
-
         }
 
         protected void Session_End(object sender, EventArgs e)
         {
-
         }
 
         protected void Application_End(object sender, EventArgs e)
         {
-
         }
     }
 }
