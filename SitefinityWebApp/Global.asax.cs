@@ -38,28 +38,25 @@ namespace SitefinityWebApp
 
         protected void Application_Start(object sender, EventArgs e)
         {
-            Bootstrapper.Initializing += new EventHandler<ExecutingEventArgs>(Bootstrapper_Initializing);
-            SystemManager.ApplicationStart += SystemManager_ApplicationStart;
+            Bootstrapper.Initialized += Bootstrapper_Initialized;
         }
 
-        void SystemManager_ApplicationStart(object sender, EventArgs e)
-        {
-            SystemManager.RunWithElevatedPrivilegeDelegate worker = new SystemManager.RunWithElevatedPrivilegeDelegate(CreateSample);
-            SystemManager.RunWithElevatedPrivilege(worker);
-        }
-
-        void Bootstrapper_Initializing(object sender, Telerik.Sitefinity.Data.ExecutingEventArgs e)
+        private void Bootstrapper_Initialized(object sender, ExecutedEventArgs e)
         {
             if (e.CommandName == "RegisterRoutes")
             {
                 SampleUtilities.RegisterModule<AkismetModule.AkismetModule>("Akismet", "Showcases Forums Akismet integration");
             }
+
+            if ((Bootstrapper.IsDataInitialized) && (e.CommandName == "Bootstrapped"))
+            {
+                SystemManager.RunWithElevatedPrivilegeDelegate worker = new SystemManager.RunWithElevatedPrivilegeDelegate(CreateSample);
+                SystemManager.RunWithElevatedPrivilege(worker);
+            }
         }
 
         private void CreateSample(object[] args)
         {
-            SampleUtilities.CreateUsersAndRoles();
-
             SampleUtilities.RegisterTheme(SamplesThemeName, SamplesThemePath);
             SampleUtilities.RegisterTemplate(new Guid(SamplesTemplateId), SamplesTemplateName, SamplesTemplateName, SamplesTemplatePath, SamplesThemeName);
 
