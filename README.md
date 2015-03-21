@@ -9,13 +9,9 @@ In addition, the Akismet sample demonstrates how to call a third-party service f
 
 
 ### Requirements
-
 * Sitefinity license
- 
 * .NET Framework 4
-
 * Visual Studio 2012
-
 * Microsoft SQL Server 2008R2 or later versions
 
 ### Nuget package restoration
@@ -40,5 +36,5 @@ To login to Sitefinity backend, use the following credentials:
 **Password:** password
 
 ### Additional resources
-Sitefinity documentation:
+Sitefinity documentation:   
 [Development: Use and extend Sitefinity functionality](http://docs.sitefinity.com/develop-create-and-manage-website-content)
