@@ -3,9 +3,13 @@ using System.Linq;
 using AkismetModule.Model;
 using Telerik.Sitefinity.Configuration;
 using Telerik.Sitefinity.Web.Services;
+using System.ServiceModel;
+using System.ServiceModel.Activation;
 
 namespace AkismetModule.Services
 {
+    [ServiceBehavior(IncludeExceptionDetailInFaults = true, InstanceContextMode = InstanceContextMode.Single, ConcurrencyMode = ConcurrencyMode.Single)]
+    [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Required)]
     public class AkismetService : IAkismetService
     {
         public AkismetViewModel GetSettings()
