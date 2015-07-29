@@ -38,7 +38,7 @@ namespace SitefinityWebApp
 
         protected void Application_Start(object sender, EventArgs e)
         {
-            Bootstrapper.Initialized += Bootstrapper_Initialized;
+            Bootstrapper.Initialized += this.Bootstrapper_Initialized;
         }
 
         private void Bootstrapper_Initialized(object sender, ExecutedEventArgs e)
@@ -50,7 +50,7 @@ namespace SitefinityWebApp
 
             if ((Bootstrapper.IsDataInitialized) && (e.CommandName == "Bootstrapped"))
             {
-                SystemManager.RunWithElevatedPrivilegeDelegate worker = new SystemManager.RunWithElevatedPrivilegeDelegate(CreateSample);
+                SystemManager.RunWithElevatedPrivilegeDelegate worker = new SystemManager.RunWithElevatedPrivilegeDelegate(this.CreateSample);
                 SystemManager.RunWithElevatedPrivilege(worker);
             }
         }
@@ -60,8 +60,8 @@ namespace SitefinityWebApp
             SampleUtilities.RegisterTheme(SamplesThemeName, SamplesThemePath);
             SampleUtilities.RegisterTemplate(new Guid(SamplesTemplateId), SamplesTemplateName, SamplesTemplateName, SamplesTemplatePath, SamplesThemeName);
 
-            CreateForums();
-            CreateBlogs();
+            this.CreateForums();
+            this.CreateBlogs();
 
             var result = SampleUtilities.CreatePage(new Guid(HomePageId), "Home", true);
 
@@ -83,6 +83,7 @@ namespace SitefinityWebApp
                 ForumsView forums = new ForumsView();
                 SampleUtilities.AddControlToPage(new Guid(ForumsPageId), forums, "Content", "Forums");
             }
+
             var result3 = SampleUtilities.CreatePage(new Guid(BlogPageId), "Blog");
             if (result3)
             {

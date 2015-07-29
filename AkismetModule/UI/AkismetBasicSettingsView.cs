@@ -7,7 +7,6 @@ using Telerik.Sitefinity.Abstractions.VirtualPath.Configuration;
 using Telerik.Sitefinity.Configuration;
 using Telerik.Sitefinity.Configuration.Web.UI.Basic;
 using Telerik.Sitefinity.Web.UI.Fields;
-using Telerik.Sitefinity.Web.UI;
 
 namespace AkismetModule.UI
 {
