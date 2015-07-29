@@ -62,7 +62,7 @@ namespace AkismetModule
                     AkismetDataId = Guid.NewGuid(),
                     ContentItemId = post.Id,
                     ItemType = typeof(ForumPost).FullName,
-                    UserIp = HttpContext.Current.Request.UserHostAddress,
+                    UserIP = HttpContext.Current.Request.UserHostAddress,
                     UserAgent = HttpContext.Current.Request.UserAgent,
                     Referrer = HttpContext.Current.Request.UrlReferrer.OriginalString
                 };
@@ -74,7 +74,7 @@ namespace AkismetModule
                     CommentType = "comment",
                     Referrer = newAkismetData.Referrer,
                     UserAgent = newAkismetData.UserAgent,
-                    UserIp = newAkismetData.UserIp,
+                    UserIp = newAkismetData.UserIP,
                 };
                 var isSpam = akismetApiClient.CommentCheck(newForumPost);
                 post.IsMarkedSpam = isSpam;
@@ -114,7 +114,7 @@ namespace AkismetModule
                             CommentType = "comment",
                             Referrer = existingAkismetData.Referrer,
                             UserAgent = existingAkismetData.UserAgent,
-                            UserIp = existingAkismetData.UserIp,
+                            UserIp = existingAkismetData.UserIP,
                         };
 
                         if (post.IsMarkedSpam)
@@ -148,7 +148,7 @@ namespace AkismetModule
                     AkismetDataId = Guid.NewGuid(),
                     ContentItemId = comment.Id,
                     ItemType = typeof(Comment).FullName,
-                    UserIp = HttpContext.Current.Request.UserHostAddress,
+                    UserIP = HttpContext.Current.Request.UserHostAddress,
                     UserAgent = HttpContext.Current.Request.UserAgent,
                     Referrer = HttpContext.Current.Request.UrlReferrer.OriginalString,
                 };
@@ -160,7 +160,7 @@ namespace AkismetModule
                     CommentType = "comment",
                     Referrer = newAkismetData.Referrer,
                     UserAgent = newAkismetData.UserAgent,
-                    UserIp = newAkismetData.UserIp,
+                    UserIp = newAkismetData.UserIP,
                     CommentAuthor = comment.AuthorName,
                     CommentAuthorEmail = comment.Email,
                     CommentAuthorUrl = comment.Website
@@ -205,7 +205,7 @@ namespace AkismetModule
                             CommentType = "comment",
                             Referrer = existingAkismetData.Referrer,
                             UserAgent = existingAkismetData.UserAgent,
-                            UserIp = existingAkismetData.UserIp,
+                            UserIp = existingAkismetData.UserIP,
                             CommentAuthor = comment.AuthorName,
                             CommentAuthorEmail = comment.Email,
                             CommentAuthorUrl = comment.Website

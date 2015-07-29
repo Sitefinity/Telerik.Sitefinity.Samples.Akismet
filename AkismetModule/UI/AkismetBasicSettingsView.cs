@@ -58,7 +58,7 @@ namespace AkismetModule.UI
             get
             {
                 if (string.IsNullOrEmpty(base.LayoutTemplatePath))
-                    return AkismetBasicSettingsView.layoutTemplateName;
+                    return AkismetBasicSettingsView.LayoutTemplateName1;
                 return base.LayoutTemplatePath;
             }
         }
@@ -111,7 +111,7 @@ namespace AkismetModule.UI
 
         #endregion
 
-        public static readonly string layoutTemplateName = GenerateVirtualPath("AkismetModule.UI.AkismetBasicSettingsView.ascx");
+        public static readonly string LayoutTemplateName1 = GenerateVirtualPath("AkismetModule.UI.AkismetBasicSettingsView.ascx");
         private static readonly string script = "AkismetModule.UI.AkismetBasicSettingsView.js";
     }
 }

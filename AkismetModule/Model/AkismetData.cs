@@ -9,7 +9,7 @@ namespace AkismetModule.Model
         [Key]
         public Guid AkismetDataId { get; set; }
 
-        public string UserIp { get; set; }
+        public string UserIP { get; set; }
 
         public string Referrer { get; set; }
 

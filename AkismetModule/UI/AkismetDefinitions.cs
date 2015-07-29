@@ -3,12 +3,12 @@ using System.Linq;
 
 namespace AkismetModule.UI
 {
-    public class AkismetDefinitions
+    public static class AkismetDefinitions
     {
         #region Constants
 
-        public static string BackendDefinitionName = "AkismetBackend";
-        public static string BackendListViewName = "AkismetBackendList";
+        public static string BackEndDefinitionName = "AkismetBackend";
+        public static string BackEndListViewName = "AkismetBackendList";
 
         #endregion
     }
