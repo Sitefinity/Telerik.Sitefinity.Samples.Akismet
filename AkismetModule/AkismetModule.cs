@@ -21,7 +21,8 @@ namespace AkismetModule
     public class AkismetModule : ModuleBase
     {
         public const string ModuleName = "Akismet";
-        public static readonly string AkismetResourceClass = "AkismetResources";        
+
+        public static readonly string AkismetResourceClass = "AkismetResources";
 
         public override void Install(SiteInitializer initializer)
         {
@@ -227,7 +228,7 @@ namespace AkismetModule
 
         public override Type[] Managers
         {
-            get 
+            get
             {
                 return AkismetModule.managerTypes;
             }
@@ -235,7 +236,7 @@ namespace AkismetModule
 
         public override Guid LandingPageId
         {
-            get 
+            get
             {
                 return SiteInitializer.DashboardPageNodeId;
             }
