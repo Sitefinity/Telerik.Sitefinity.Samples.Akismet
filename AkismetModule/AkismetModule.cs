@@ -8,13 +8,13 @@ using Joel.Net;
 using Telerik.Sitefinity;
 using Telerik.Sitefinity.Abstractions;
 using Telerik.Sitefinity.Configuration;
+using Telerik.Sitefinity.Forums;
 using Telerik.Sitefinity.Forums.Events;
 using Telerik.Sitefinity.Forums.Model;
 using Telerik.Sitefinity.GenericContent.Model;
+using Telerik.Sitefinity.Modules.Blogs;
 using Telerik.Sitefinity.Modules.GenericContent.Events;
 using Telerik.Sitefinity.Services;
-using Telerik.Sitefinity.Forums;
-using Telerik.Sitefinity.Modules.Blogs;
 
 namespace AkismetModule
 {
@@ -96,7 +96,6 @@ namespace AkismetModule
                 var existingPost = forumsMan.GetPost(post.Id);
                 if (existingPost != null && existingPost.IsMarkedSpam != post.IsMarkedSpam)
                 {
-
                     Akismet akismetApiClient = new Akismet(Config.Get<AkismetModuleConfig>().ApiKey, "http://www.sitefinity.com", "SitefinityAkismetModule");
                     if (!akismetApiClient.VerifyKey())
                     {
@@ -130,7 +129,6 @@ namespace AkismetModule
                     }
                 }
             }
-
         }
 
         private void ValidateCreatingComment(Comment comment)

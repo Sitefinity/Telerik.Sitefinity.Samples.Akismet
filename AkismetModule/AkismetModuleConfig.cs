@@ -1,8 +1,8 @@
 ﻿using System;
+using System.Configuration;
 using System.Linq;
 using Telerik.Sitefinity.Configuration;
 using Telerik.Sitefinity.Localization;
-using System.Configuration;
 
 namespace AkismetModule
 {
@@ -17,6 +17,7 @@ namespace AkismetModule
             {
                 return (string)this["apiKey"];
             }
+
             set
             {
                 this["apiKey"] = value;
@@ -31,6 +32,7 @@ namespace AkismetModule
             {
                 return (bool)this["protectComments"];
             }
+
             set
             {
                 this["protectComments"] = value;
@@ -45,6 +47,7 @@ namespace AkismetModule
             {
                 return (bool)this["protectForums"];
             }
+
             set 
             {
                 this["protectForums"] = value;

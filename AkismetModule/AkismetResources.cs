@@ -11,16 +11,15 @@ namespace AkismetModule
         public AkismetResources()
             : base()
         {
-
         }
 
-        public AkismetResources(ResourceDataProvider dataProvider) : base(dataProvider)
+        public AkismetResources(ResourceDataProvider dataProvider)
+            : base(dataProvider)
         {
-
         }
 
         [ResourceEntry("AkismetSettingsTitle",
-            Value = "Akismet Settings", 
+            Value = "Akismet Settings",
             Description = "Settings for the Akismet module",
             LastModified = "2012/09/28")]
         public string AkismetSettingsTitle
