@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Linq;
+using System.ServiceModel;
+using System.ServiceModel.Activation;
 using AkismetModule.Model;
 using Telerik.Sitefinity.Configuration;
 using Telerik.Sitefinity.Web.Services;
-using System.ServiceModel;
-using System.ServiceModel.Activation;
 
 namespace AkismetModule.Services
 {

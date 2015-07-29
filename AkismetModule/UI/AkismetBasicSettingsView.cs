@@ -80,6 +80,7 @@ namespace AkismetModule.UI
                 ConfigManager.GetManager().SaveSection(virtualPathConfig);
                 VirtualPathManager.Reset();
             }
+
             return "~/SFAkismet/" + path;
         }
 

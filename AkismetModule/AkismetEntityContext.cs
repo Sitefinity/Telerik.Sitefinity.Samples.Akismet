@@ -11,7 +11,8 @@ namespace AkismetModule
     {
         // call the base constructor with the default connection string from DataConfig.config
         // to use the same DB.
-        public AkismetEntityContext() : base(Config.Get<DataConfig>().ConnectionStrings["Sitefinity"].ConnectionString)
+        public AkismetEntityContext()
+            : base(Config.Get<DataConfig>().ConnectionStrings["Sitefinity"].ConnectionString)
         {
         }
 

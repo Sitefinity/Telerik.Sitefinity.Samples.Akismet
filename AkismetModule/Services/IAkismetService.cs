@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Linq;
 using System.ServiceModel;
-using AkismetModule.Model;
 using System.ServiceModel.Web;
+using AkismetModule.Model;
 
 namespace AkismetModule.Services
 {
