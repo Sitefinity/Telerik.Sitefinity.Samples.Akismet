@@ -1,15 +1,15 @@
-Telerik.Sitefinity.Samples.Akismet
+Progress.Sitefinity.Samples.Akismet
 ==================================
 
 [![Build Status](http://sdk-jenkins-ci.cloudapp.net/buildStatus/icon?job=Telerik.Sitefinity.Samples.Akismet.CI)](http://sdk-jenkins-ci.cloudapp.net/job/Telerik.Sitefinity.Samples.Akismet.CI/)
 
-The Akismet sample project demonstrates how you can use the Akismet service to filter spam in forum posts and comments. The Akismet sample uses the Sitefinity event architecture. On the event of creating or updating an item, the Akismet service is called to verify whether the item is spam or not. 
+The Akismet sample project demonstrates how you can use the Akismet service to filter spam in forum posts and comments. The Akismet sample uses the Sitefinity CMS event architecture. On the event of creating or updating an item, the Akismet service is called to verify whether the item is spam or not. 
 
-In addition, the Akismet sample demonstrates how to call a third-party service from Sitefinity.
+In addition, the Akismet sample demonstrates how to call a third-party service from Sitefinity CMS.
 
 
 ### Requirements
-* Sitefinity license
+* Sitefinity CMS license
 * .NET Framework 4.5
 * Visual Studio 2012
 * Microsoft SQL Server 2008R2 or later versions
@@ -30,11 +30,11 @@ For version-specific details about the required Sitefinity NuGet packages for th
  
 ### Login
 
-To login to Sitefinity backend, use the following credentials: 
+To login into the Sitefinity CMS backend, use the following credentials: 
 
 **Username:** admin   
 **Password:** password
 
 ### Additional resources
-Sitefinity documentation:   
-[Development: Use and extend Sitefinity functionality](http://docs.sitefinity.com/develop-create-and-manage-website-content)
+Progress Sitefinity CMS Documentation:   
+[Development: Use and extend Sitefinity CMS functionality](http://docs.sitefinity.com/develop-create-and-manage-website-content)
