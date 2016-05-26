@@ -2,8 +2,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitefinityWebApp", "SitefinityWebApp.csproj", "{3E598CFC-83B2-494A-A97F-32EB24D797C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Telerik.Sitefinity.Samples.Common", "..\Telerik.Sitefinity.Samples.Common\Telerik.Sitefinity.Samples.Common.csproj", "{CF03FB62-A8CC-42B4-9C81-87920C530D74}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkismetModule", "..\AkismetModule\AkismetModule.csproj", "{DAD3D050-C353-4C59-8EF6-E4C9EA0A7F02}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akismet", "..\AkismetClient\Akismet.csproj", "{006DE6B0-1513-44FC-B37B-3DB0C2631CD1}"
@@ -28,12 +26,6 @@ Global
 		{3E598CFC-83B2-494A-A97F-32EB24D797C6}.Release Pro|Any CPU.Build.0 = Release Pro|Any CPU
 		{3E598CFC-83B2-494A-A97F-32EB24D797C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E598CFC-83B2-494A-A97F-32EB24D797C6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CF03FB62-A8CC-42B4-9C81-87920C530D74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CF03FB62-A8CC-42B4-9C81-87920C530D74}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CF03FB62-A8CC-42B4-9C81-87920C530D74}.Release Pro|Any CPU.ActiveCfg = Release|Any CPU
-		{CF03FB62-A8CC-42B4-9C81-87920C530D74}.Release Pro|Any CPU.Build.0 = Release|Any CPU
-		{CF03FB62-A8CC-42B4-9C81-87920C530D74}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CF03FB62-A8CC-42B4-9C81-87920C530D74}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DAD3D050-C353-4C59-8EF6-E4C9EA0A7F02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DAD3D050-C353-4C59-8EF6-E4C9EA0A7F02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DAD3D050-C353-4C59-8EF6-E4C9EA0A7F02}.Release Pro|Any CPU.ActiveCfg = Release|Any CPU
