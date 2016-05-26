@@ -32,10 +32,9 @@ using System.Runtime.InteropServices;
 //
 // You can specify all the values or you can default the Revision and Build Numbers 
 // by using the '*' as shown below:
-[assembly: AssemblyVersion("4.3.1873.0")]
-[assembly: AssemblyFileVersion("4.3.1873.0")]
+[assembly: AssemblyVersion("9.1.6100.0")]
+[assembly: AssemblyFileVersion("9.1.6100.0")]
 [assembly: NeutralResourcesLanguageAttribute("en")]
-
 
 [assembly: Telerik.Sitefinity.Frontend.Mvc.Infrastructure.Controllers.Attributes.ControllerContainer]
 
